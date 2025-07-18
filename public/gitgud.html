@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitGud Difficulty</title>
+  <link rel="stylesheet" href="css/gitgud.css" />
+</head>
+<body>
+  <h1>Welcome to GitGud!</h1>
+
+  <div class="autocomplete-wrapper">
+    <form id="level-form" autocomplete="off">
+      <input id="autocomplete-input" type="text" placeholder="level" />
+    </form>
+    <ul id="autocomplete-list" class="autocomplete-list"></ul>
+  </div>
+
+  <!-- the button is tied to the form via `form="level-form"` -->
+  <button type="submit" form="level-form" class="btn-submit">Submit</button>
+
+  <script src="/gitgud.js"></script>
+</body>
+</html>

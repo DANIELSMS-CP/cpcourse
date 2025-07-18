@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register</title>
+  <link rel="stylesheet" href="css/formStyle.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-...redacted..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+<body>
+  <main class="auth-card">
+    <!-- left : picture -->
+    <figure class="auth-img">
+      <img src="css/akame.jpeg">
+    </figure>
+
+    <!-- right : login form -->
+    <section class="auth-panel">
+      <form id="loginForm">
+        <h1>Login</h1>
+        <label>Email
+          <input name="email" type="email" required>
+        </label>
+        <br>
+        <label>Password
+          <input name="password" type="password" required>
+        </label>
+        <p id="flash"></p>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+
+
+  <script>
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+				window.location.href = '/mainmenu.html'; 
+			} else {
+				document.getElementById('flash').textContent =
+					`Login failed`;
+			}
+    });
+  </script>
+</body>
+</html>

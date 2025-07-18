@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --------- CSS RESET --------- */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/* --------- BASE STYLE --------- */
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: url(coding.jpeg);
+  align-items: center;
+  min-height: 100vh;
+  color: #1d1d1d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.auth-card {
+  display: flex;
+  background: rgb(228, 228, 228);
+  overflow: hidden;
+  max-width: fit-content;              
+  margin: 3rem auto;   
+}           
+.auth-img  { flex: 0 0 30vw; min-width: 300px; }
+.auth-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.auth-panel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 4rem clamp(2rem, 5vw, 5rem);
+  background: #fafafa;
+}
+form input[type="email"]
+{
+  width: 100%;
+  padding: .55rem .75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: .95rem;
+}
+form input[type="password"] {
+  width: 100%;
+  padding: .55rem .75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: .95rem;
+}
+
+form button {
+  padding: .55rem 1.2rem;
+  border: black;
+  background: #d63232;
+  color: #fff;
+  border-radius: 100px;
+  cursor: pointer;
+}
+button:hover  { background: color-mix(in srgb, #d63232 80%, #000); }

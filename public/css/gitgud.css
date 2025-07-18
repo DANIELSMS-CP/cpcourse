@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+* 
+{
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+.btn-submit
+{
+    padding-bottom: .55rem 1.2rem;
+    padding: .55rem 1.2rem;
+    border: black;
+    background: #d63232;
+    color: #fff;
+    border-radius: 100px;
+}
+
+.autocomplete-wrapper
+{
+    display: inline-block;
+    position: relative;
+}
+
+.autocomplete-list
+{
+    list-style: none;
+    padding: unset;
+    margin: unset;
+    color: black;
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    z-index: 1000; /* Make sure it appears above other elements */
+}
+
+.autocomplete-list li
+{
+    border: 1px solid red;
+    border-top: unset;
+    background: white; /* Add background color so it's visible */
+    padding: 8px 12px; /* Add padding to make it clickable */
+}
+
+/* Make the first item have a top border */
+.autocomplete-list li:first-child
+{
+    border-top: 1px solid red;
+}
+
+/* Add hover effect */
+.autocomplete-list li:hover
+{
+    background: #f0f0f0;
+}
